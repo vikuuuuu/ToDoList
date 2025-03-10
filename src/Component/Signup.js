@@ -10,9 +10,10 @@ function Signup() {
   const handleSignup = (e) => {
     e.preventDefault();
     axios
-      .post("", { name, email, password })
+      .post("http://localhost:3001/register", { name, email, password })
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
+    window.location = "/login";
   };
 
   return (
